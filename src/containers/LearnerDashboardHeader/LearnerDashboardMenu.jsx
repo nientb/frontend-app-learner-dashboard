@@ -15,6 +15,8 @@ const getLearnerHeaderMenu = (
   console.log('formatMessage:', formatMessage);
   console.log('courseSearchUrl:', courseSearchUrl);
   console.log('authenticatedUser:', authenticatedUser);
+  console.log('urls:', urls);
+  console.log('getConfig:', getConfig());
   console.log('ENABLE_PROGRAMS:', getConfig().ENABLE_PROGRAMS);
   console.log('SUPPORT_URL:', getConfig().SUPPORT_URL);
   console.log('ORDER_HISTORY_URL:', getConfig().ORDER_HISTORY_URL);
@@ -27,7 +29,7 @@ const getLearnerHeaderMenu = (
         content: formatMessage(messages.course),
         isActive: true,
       },
-      ...(getConfig().ENABLE_PROGRAMS ? [{
+      ...(true ? [{
         type: 'item',
         href: `${urls.programsUrl()}`,
         content: formatMessage(messages.program),
